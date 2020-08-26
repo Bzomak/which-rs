@@ -17,8 +17,8 @@ struct TestFixture {
     pub bins: Vec<PathBuf>,
 }
 
-const SUBDIRS: &'static [&'static str] = &["a", "b", "c"];
-const BIN_NAME: &'static str = "bin";
+const SUBDIRS: &[&str] = &["a", "b", "c"];
+const BIN_NAME: &str = "bin";
 
 #[cfg(unix)]
 fn mk_bin(dir: &Path, path: &str, extension: &str) -> io::Result<PathBuf> {
@@ -67,9 +67,9 @@ impl TestFixture {
             paths.push(p);
         }
         TestFixture {
-            tempdir: tempdir,
+            tempdir,
             paths: env::join_paths(paths).unwrap(),
-            bins: bins,
+            bins,
         }
     }
 
