@@ -1,4 +1,4 @@
-use error::*;
+use crate::error::*;
 #[cfg(windows)]
 use helper::has_executable_extension;
 use std::env;

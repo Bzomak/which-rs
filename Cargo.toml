@@ -9,6 +9,7 @@ description = "A Rust equivalent of Unix command \"which\". Locate installed exe
 readme = "README.md"
 categories = ["os", "filesystem"]
 keywords = ["which", "which-rs", "unix", "command"]
+edition = "2018"
 
 [dependencies]
 libc = "0.2.65"

@@ -1,6 +1,4 @@
-use finder::Checker;
-#[cfg(unix)]
-use libc;
+use crate::finder::Checker;
 #[cfg(unix)]
 use std::ffi::CString;
 use std::fs;

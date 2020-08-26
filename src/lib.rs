@@ -14,9 +14,6 @@
 //!
 //! ```
 
-extern crate libc;
-extern crate thiserror;
-
 mod checker;
 mod error;
 mod finder;
@@ -126,7 +123,7 @@ impl Path {
 }
 
 impl fmt::Debug for Path {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         fmt::Debug::fmt(&self.inner, f)
     }
 }
@@ -220,7 +217,7 @@ impl CanonicalPath {
 }
 
 impl fmt::Debug for CanonicalPath {
-    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         fmt::Debug::fmt(&self.inner, f)
     }
 }

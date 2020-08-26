@@ -1,6 +1,3 @@
-extern crate tempdir;
-extern crate which;
-
 use std::env;
 use std::ffi::{OsStr, OsString};
 use std::fs;
