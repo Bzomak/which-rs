@@ -16,4 +16,4 @@ libc = "0.2.76"
 thiserror = "1.0"
 
 [dev-dependencies]
-tempdir = "0.3.7"
+tempfile = "3.1.0"

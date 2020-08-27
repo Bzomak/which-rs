@@ -3,7 +3,7 @@ use std::ffi::{OsStr, OsString};
 use std::fs;
 use std::io;
 use std::path::{Path, PathBuf};
-use tempdir::TempDir;
+use tempfile::TempDir;
 
 struct TestFixture {
     /// Temp directory.
@@ -50,7 +50,7 @@ impl TestFixture {
     // tmp/c/bin.exe
     // tmp/c/bin.cmd
     pub fn new() -> TestFixture {
-        let tempdir = TempDir::new("which_tests").unwrap();
+        let tempdir = TempDir::new().unwrap();
         let mut builder = fs::DirBuilder::new();
         builder.recursive(true);
         let mut paths = vec![];
